@@ -1,4 +1,5 @@
-
+// Do this in React later
+// Make a photo component so that I can dynamically create all the images.  
 
 const onlineImageUrls = [
 'https://images.unsplash.com/photo-1558981359-219d6364c9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
@@ -22,13 +23,12 @@ xhr.open("GET", "/images", true);
 xhr.responseType = 'document';
 xhr.onload = () => {
   if (xhr.status === 200) {
-  console.log(xhr);
+  // console.log(xhr);
     
     var elements = xhr.response.getElementsByTagName("a");
     for (x of elements) {
       if ( x.href.match(/\.(jpe?g|png|gif)$/) ) { 
-          let img = document.createElement("img");
-          localImageURLs.push(x.href);
+          localImageURLs.push(x.);
           // document.body.appendChild(img);
       } 
     };
@@ -37,21 +37,34 @@ xhr.onload = () => {
     alert('Request failed. Returned status of ' + xhr.status);
   }
 
+  getImages(localImageURLs)
 
-  const photoGridchildren = document.getElementById('photo-grid').children;
-  // photoGrid.children
-  // console.log(photoGrid.children)
+  // const photoGridchildren = document.getElementById('photo-grid').children;
+  // // photoGrid.children
+  // // console.log(photoGrid.children)
 
-  Object.keys(photoGridchildren).forEach(key => {
-    console.log(key, photoGridchildren[key]);
+  // Object.keys(photoGridchildren).forEach(key => {
+  //   // console.log(key, photoGridchildren[key]);
 
-    const images = localImageURLs.concat(onlineImageUrls);
-  console.log(images)
-    photoGridchildren[key].style.backgroundImage = `url(${images[key]})`
+  //   const images = localImageURLs.concat(onlineImageUrls);
+  // // console.log(images)
+  //   photoGridchildren[key].style.backgroundImage = `url(${images[key]})`
 
-  });
+  // });
 
 
 }
 xhr.send()
 
+
+async function getImages(images) {
+  console.log(images)
+
+  const fetchs = images.map(x => fetch(x))
+  Promise.all(fetchs)
+  .then((response) => {response.blob(); console.log(response)})
+  .then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
+}
