@@ -161,3 +161,36 @@ header {
     animation-iteration-count: infinite; 
     animation-direction: alternate;
 }
+
+
+
+
+
+
+.nav-toggle {
+    height: 5rem;
+    width: 5rem;
+    background-color: #97d0de;
+    position: fixed;
+    left: calc(50% - 2.5rem);
+    bottom: 3rem;
+    /* transform: translatex(-50%); */
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: transform, background-color;
+    border: none;
+    outline: none;
+    box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 1);
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+
+}
+
+.nav-toggle:hover {
+    transform: scale(1.2);
+}
+
+.nav-toggle:active {
+    transition-duration: 50ms;
+    transform: scale(0.8);
+}

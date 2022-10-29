@@ -1,0 +1,46 @@
+
+:root {
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+    --blue: #0084a5;
+    --purple: #a82dd1;
+    --yellow: #d42f45;
+}
+
+
+.dark {
+    --bg: var(--gray5);
+    --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+    --bg-dropdown: var(--gray6);
+    --text: var(--gray0);
+    --border-color: var(--purple);
+    --bg-solar: var(--blue);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+
+.title-container {
+    width: auto;
+    min-width: 300px;
+    height: auto;
+    margin: 2rem;
+    text-align: center;
+}
