@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/defaultStyles.css"></link>
     <link rel="stylesheet" href="css/grid.css"></link>
+    <script defer src="scripts/photoGrid.js"></script>
     <title>Photo Grid</title>
 </head>
 <body class="dark">
     <header>
         <div class="title-container">
             <h1>Photo Grid</h1>
-            <a href="https://www.youtube.com/watch?v=705XCEruZFs">Youtube ref video</a>
         </div>
     </header>
     <main>
-        <div class="photo-grid">
+        <div id="photo-grid" class="photo-grid">
             <div
               class="card card-tall card-wide"
-              style="background-image:url('https://images.unsplash.com/photo-1558981359-219d6364c9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')"
+              style="background-image:url('images/anime.jpg')"
             >
               1
             </div>
@@ -89,6 +90,10 @@
             >
               12
             </div>
+        </div>
+        <div class="video-container"> 
+          <p>Reference video</p>
+          <iframe width="1280" height="720" src="https://www.youtube.com/embed/705XCEruZFs" title="The Joy of CSS Grid - Build 3 Beautifully Simple Responsive Layouts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </main>
 </body>
