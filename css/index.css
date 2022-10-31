@@ -1,6 +1,52 @@
 
 
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 2em;
+    text-transform: uppercase;
+    user-select: none;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+ }
+  
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.05);
+ }
+
+.card:active {
+    transition-duration: 100ms;
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(0.8);
+}
+
+
+
+.basic-grid {
+    display: grid;
+    gap: 1rem;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: repeat(12, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: var(--padding);
+
+}
 
 
 
